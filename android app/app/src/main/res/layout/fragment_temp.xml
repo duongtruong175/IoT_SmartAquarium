@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TempFragment">
+
+    <RelativeLayout
+        android:id="@+id/l_temp_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_label_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Công tắc que sưởi"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_label_control"
+            android:layout_marginTop="14dp"
+            android:layout_alignLeft="@id/tv_label_control"
+            android:text="Điều chỉnh nhiệt độ nước bằng que sưởi (18°C - 32°C)"
+            android:textSize="10sp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:checked="false"
+            app:switchMinWidth="50dp"
+            app:switchPadding="4dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/l_temp_control"
+        android:layout_centerHorizontal="true"
+        android:text="Nhiệt độ hiện tại"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_temp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="0°C"
+        android:textStyle="bold"
+        android:textSize="32sp"/>
+
+</RelativeLayout>

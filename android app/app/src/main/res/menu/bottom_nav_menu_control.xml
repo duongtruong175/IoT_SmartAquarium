@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_color"
+        android:icon="@drawable/ic_baseline_color_lens_24"
+        android:title="COLOR" />
+
+    <item
+        android:id="@+id/navigation_pump"
+        android:icon="@drawable/ic_baseline_pump_24"
+        android:title="PUMP" />
+
+    <item
+        android:id="@+id/navigation_temp"
+        android:icon="@drawable/ic_temperature"
+        android:title="TEMP" />
+
+    <item
+        android:id="@+id/navigation_tds"
+        android:icon="@drawable/ic_baseline_waves_24"
+        android:title="TDS" />
+</menu>

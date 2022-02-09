@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AquariumActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_aquarium" />
+
+    <include
+        android:id="@+id/pb_loading"
+        layout="@layout/progressbar_loading"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/list_user_aquarium"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null"/>
+
+    <ImageView
+        android:id="@+id/add_user_aquarium"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>

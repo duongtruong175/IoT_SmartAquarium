@@ -1,0 +1,173 @@
+Tạo sẵn thiết bị cho bể cá (admin tạo trước)
+device_type: ESP32
+device_id: D8B0ACE6E2E0
+
+==========================
+
+- Database Db2
+
+CREATE TABLE "AquariumData"
+(
+"id" INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+"device_id" VARCHAR(20) NOT NULL,
+"temperature" DOUBLE NOT NULL,
+"water_level" DOUBLE NOT NULL,
+"tds" DOUBLE NOT NULL,
+"time_send" DOUBLE NOT NULL,
+PRIMARY KEY ("id")
+);
+
+CREATE TABLE "User"
+(
+"id" INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+"username" VARCHAR(20) NOT NULL,
+"password" VARCHAR(20) NOT NULL,
+"name" VARCHAR(50) NOT NULL,
+"email" VARCHAR(50) NOT NULL,
+"gender" VARCHAR(20) NOT NULL,
+"date" VARCHAR(20) NOT NULL,
+PRIMARY KEY ("username") 
+);
+
+CREATE TABLE "Aquarium"
+(
+"id" INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+"device_type" VARCHAR(20) NOT NULL,
+"device_id" VARCHAR(20) NOT NULL,
+PRIMARY KEY ("device_id") 
+);
+
+CREATE TABLE "UserAquarium"
+(
+"id" INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+"aquarium_name" VARCHAR(20) NOT NULL,
+"user_id" INT NOT NULL,
+"device_id" VARCHAR(20) NOT NULL,
+PRIMARY KEY ("user_id", "device_id")
+);
+
+==========================
+
+- Database mysql
+--
+-- Cơ sở dữ liệu: `smartaquarium`
+--
+
+CREATE DATABASE smartaquarium;
+USE smartaquarium;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `aquarium`
+--
+
+CREATE TABLE `aquarium` (
+  `id` int(11) NOT NULL,
+  `device_type` varchar(20) NOT NULL,
+  `device_id` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `aquariumdata`
+--
+
+CREATE TABLE `aquariumdata` (
+  `id` int(11) NOT NULL,
+  `device_id` varchar(20) NOT NULL,
+  `temperature` double NOT NULL,
+  `water_level` double NOT NULL,
+  `tds` double NOT NULL,
+  `time_send` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `date` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `useraquarium`
+--
+
+CREATE TABLE `useraquarium` (
+  `id` int(11) NOT NULL,
+  `aquarium_name` varchar(20) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `device_id` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `aquarium`
+--
+ALTER TABLE `aquarium`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`device_id`);
+
+--
+-- Chỉ mục cho bảng `aquariumdata`
+--
+ALTER TABLE `aquariumdata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`username`);
+
+--
+-- Chỉ mục cho bảng `useraquarium`
+--
+ALTER TABLE `useraquarium`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `UNIQUE` (`user_id`,`device_id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `aquarium`
+--
+ALTER TABLE `aquarium`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `aquariumdata`
+--
+ALTER TABLE `aquariumdata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `useraquarium`
+--
+ALTER TABLE `useraquarium`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;

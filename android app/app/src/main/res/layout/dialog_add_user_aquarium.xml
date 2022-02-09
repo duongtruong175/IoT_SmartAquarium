@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm bể cá"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txt_span1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên bể cá"
+        android:gravity="center|left"
+        android:layout_alignLeft="@id/et_aquarium_name"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txt_header"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_aquarium_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/txt_span1"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_radius"
+        android:textColorHint="#FFB3B3B3"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:hint="Nhập tên bể cá" />
+
+    <TextView
+        android:id="@+id/txt_span2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID thiết bị"
+        android:gravity="center|left"
+        android:layout_alignLeft="@id/et_device_id"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/et_aquarium_name"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_device_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/txt_span2"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_radius"
+        android:textColorHint="#FFB3B3B3"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:hint="Nhập ID thiết bị" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_device_id"
+        android:background="@drawable/button_radius"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="11sp"
+        android:text="Thêm mới"/>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_add"
+        android:layout_alignBottom="@+id/btn_add"
+        android:layout_toRightOf="@+id/btn_add"
+        android:background="@drawable/button_radius"
+        android:layout_marginLeft="40dp"
+        android:textSize="11sp"
+        android:text="Hủy bỏ"/>
+
+</RelativeLayout>

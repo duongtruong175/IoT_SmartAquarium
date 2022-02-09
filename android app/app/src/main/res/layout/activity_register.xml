@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".activities.RegisterActivity">
+
+    <include
+        android:id="@+id/pb_loading"
+        android:visibility="gone"
+        layout="@layout/progressbar_loading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ic_aquarium" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_logo"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/blue_300"
+                android:textStyle="bold"
+                android:text="Bể cá cảnh thông minh"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/et_username"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:background="@drawable/edittext_radius"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_logo"
+                android:layout_marginTop="60dp"
+                android:hint="Tên đăng nhập"
+                android:textColorHint="#FFB3B3B3"
+                android:textSize="14sp"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:textColor="#000000"
+                android:background="@drawable/edittext_radius"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:layout_alignLeft="@+id/et_username"
+                android:layout_alignStart="@id/et_username"
+                android:layout_below="@id/et_username"
+                android:layout_marginTop="20dp"
+                android:hint="Mật khẩu"
+                android:textColorHint="#FFB3B3B3"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="8dp"
+                android:background="@drawable/edittext_radius"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/et_password"
+                android:layout_marginTop="20dp"
+                android:hint="Tên"
+                android:textColorHint="#FFB3B3B3"
+                android:textSize="14sp"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="8dp"
+                android:background="@drawable/edittext_radius"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:textColor="#000000"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/et_name"
+                android:layout_marginTop="20dp"
+                android:hint="Địa chỉ email"
+                android:textColorHint="#FFB3B3B3"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/et_email"
+                android:layout_below="@+id/et_email"
+                android:layout_marginTop="20dp"
+                android:text="Giới tính"
+                android:textColor="#000000"
+                android:textSize="18sp"/>
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_gender"
+                android:layout_alignLeft="@+id/et_email"
+                android:layout_alignRight="@+id/et_email"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:paddingLeft="2dp"
+                    android:text="Nam"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="2dp"
+                    android:text="Nữ"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/radio_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="2dp"
+                    android:text="Khác"
+                    android:textSize="14sp"
+                    android:textColor="#000000" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:drawablePadding="8dp"
+                android:background="@drawable/edittext_radius"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:gravity="center|left"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rg_gender"
+                android:layout_marginTop="20dp"
+                android:hint="dd/mm/yyyy"
+                android:textSize="14sp"
+                android:textColorHint="#FFB3B3B3"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_radius"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_below="@+id/tv_date"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="Đăng ký" />
+
+            <TextView
+                android:id="@+id/tv_span"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/btn_register"
+                android:layout_toLeftOf="@id/tv_login"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:textColor="#FFB3B3B3"
+                android:text="Đã có tài khoản?" />
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/btn_register"
+                android:layout_alignRight="@+id/btn_register"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/blue_300"
+                android:text="Đăng nhập" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_below="@+id/tv_span"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

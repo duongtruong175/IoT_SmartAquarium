@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Hủy thay đổi?"
+        android:textSize="14sp"
+        android:textColor="#AA000000" />
+
+    <View
+        android:id="@+id/v_cross1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_confirm"
+        android:background="#BBBBBB" />
+
+    <View
+        android:id="@+id/v_cross2"
+        android:layout_width="0.5dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_confirm"
+        android:background="#BBBBBB" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/v_cross2"
+        android:layout_alignBottom="@+id/v_cross2"
+        android:layout_alignLeft="@+id/tv_confirm"
+        android:layout_alignRight="@+id/v_cross2"
+        android:layout_below="@+id/v_cross1"
+        android:gravity="center"
+        android:text="KHÔNG"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/v_cross2"
+        android:layout_alignBottom="@+id/v_cross2"
+        android:layout_alignRight="@+id/tv_confirm"
+        android:layout_alignLeft="@+id/v_cross2"
+        android:layout_below="@+id/v_cross1"
+        android:gravity="center"
+        android:text="HỦY THAY ĐỔI"
+        android:textColor="#000000"
+        android:textSize="16sp"/>
+
+</RelativeLayout>
