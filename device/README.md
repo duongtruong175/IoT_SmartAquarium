@@ -17,7 +17,7 @@ vào trong File -> Preferences -> Additional Boards Manager URLs
 ### 3. Thêm các thư viện cần thiết
 
 - Chọn Sketch -> Include Library -> Manager Libraries...
-- các thư viện: PubSubClient, NTPClient, Arduino_JSON
+- các thư viện: PubSubClient (by Nick O'Leary), NTPClient (by Fabrice Weinberg), Arduino_JSON (by Arduino), OneWire (by Paul Stoffregen), DallasTemperature (by Miles Burton)
 
 ## Nạp code và chạy
 
