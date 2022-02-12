@@ -64,7 +64,7 @@ DallasTemperature sensors(&oneWire);
    + chiều cao mức nước = chiều cao của bể - khoảng cách từ mặt bể tới nước
 */
 // chân cảm biến sensor siêu âm
-const int trigPin = 12; // GPIO12- D6
+const int trigPin = 12; // GPIO12 - D6
 const int echoPin = 14; // GPIO14 - D5
 // tốc độ sóng âm trong không khí tính theo cm/uS
 const float SOUND_VELOCITY = 0.0343;

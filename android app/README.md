@@ -6,4 +6,4 @@ Android App
 
 - cài đặt android studio
 - clone code từ github và mở bằng android studio
-- mở và kết nối vào thiết bị android để chạy
+- mở và kết nối vào thiết bị android để chạy (edit API_URL_BASE in MainActivity.java)
