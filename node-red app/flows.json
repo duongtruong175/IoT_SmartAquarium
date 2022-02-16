@@ -1,264 +1,77 @@
 [
     {
-        "id": "25ca788654d8e6c3",
+        "id": "73dafa2e5aa8fce5",
         "type": "tab",
-        "label": "API",
+        "label": "API Mysql",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "4ff48984.4f9cb",
-        "type": "tab",
-        "label": "Add Aquarium",
-        "disabled": false,
-        "info": ""
+        "id": "d850d3048615863d",
+        "type": "MySQLdatabase",
+        "name": "smart_aquarium - mysql",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "smart_aquarium",
+        "tz": "",
+        "charset": "UTF8"
     },
     {
-        "id": "3f4e811af2b68703",
-        "type": "Db2",
-        "hostname": "b1bc1829-6f45-4cd4-bef4-10cf081900bf.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud",
-        "db": "bludb",
-        "port": "32304",
-        "name": "Db2-DKT"
+        "id": "4e8989aa1b39439f",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-1",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            [
+                "030bb906389f592d"
+            ]
+        ]
     },
     {
-        "id": "67ff17e9.83751",
-        "type": "ui_tab",
-        "name": "Forms Example ",
-        "icon": "Home",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "54bca71e.4287f",
-        "type": "ui_group",
-        "name": "Form",
-        "tab": "67ff17e9.83751",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "6d4b6f37.3f68b",
-        "type": "ui_group",
-        "z": "4ff48984.4f9cb",
-        "name": "Dashboard Event Log",
-        "tab": "67ff17e9.83751",
-        "order": 3,
-        "disp": true,
-        "width": "8",
-        "collapse": false
-    },
-    {
-        "id": "e97e68aad9f400a7",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-light",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
-        "id": "af395d4be2978dfa",
+        "id": "9f8922966f131c6a",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API User Login",
         "url": "/api/user/login",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 100,
-        "y": 100,
+        "y": 80,
         "wires": [
             [
-                "0cc2b8ded6e96920"
+                "d71b510ebfc068b5"
             ]
         ]
     },
     {
-        "id": "ffcca1c1b5dbc55b",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "200 + user data",
-        "statusCode": "200",
-        "headers": {},
-        "x": 880,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "b6eaa9e6cb67b9de",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 490,
-        "y": 100,
-        "wires": [
-            [
-                "a4c7f84713121085"
-            ]
-        ]
-    },
-    {
-        "id": "dbaf9dc4622b13f7",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 870,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "0cc2b8ded6e96920",
+        "id": "d71b510ebfc068b5",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"SELECT * FROM \\\"User\\\" WHERE \\\"username\\\" = '\" + msg.req.body.username + \"' AND \\\"password\\\" = '\" + msg.req.body.password + \"';\";\n\nreturn msg;",
+        "func": "msg.payload={}\nmsg.payload.username = msg.req.body.username;\nmsg.payload.password = msg.req.body.password;\n\nmsg.topic = \"SELECT * FROM `user` WHERE `username` = :username AND `password` = :password AND `isAdmin` = 0;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 100,
+        "x": 310,
+        "y": 80,
         "wires": [
             [
-                "b6eaa9e6cb67b9de"
+                "4e8989aa1b39439f"
             ]
         ]
     },
     {
-        "id": "a4c7f84713121085",
+        "id": "030bb906389f592d",
         "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 490,
-        "y": 180,
-        "wires": [
-            [
-                "65fcbdfa329fd790"
-            ],
-            [
-                "dbaf9dc4622b13f7"
-            ]
-        ]
-    },
-    {
-        "id": "65fcbdfa329fd790",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check null",
+        "z": "73dafa2e5aa8fce5",
+        "name": "check result payload",
         "property": "payload",
         "propertyType": "msg",
         "rules": [
@@ -272,928 +85,1066 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 700,
-        "y": 140,
+        "x": 980,
+        "y": 460,
         "wires": [
             [
-                "ffcca1c1b5dbc55b"
+                "0cdc39d2cd8848e3"
             ],
             [
-                "dbaf9dc4622b13f7"
+                "786caa8d2e124b69"
             ]
         ]
     },
     {
-        "id": "949e2a1afc4a6c62",
+        "id": "74dc2b039d4f0d1b",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API User Register",
         "url": "/api/user/register",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 320,
+        "y": 160,
         "wires": [
             [
-                "29700293c0ab3001"
+                "bcd4b8235b8650d7"
             ]
         ]
     },
     {
-        "id": "bff9a13b3c66fdc8",
+        "id": "c865c184caf1c6e1",
         "type": "http response",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "201 - created",
         "statusCode": "201",
         "headers": {},
-        "x": 870,
-        "y": 300,
+        "x": 1590,
+        "y": 640,
         "wires": []
     },
     {
-        "id": "4165590f21da11d6",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 320,
-        "wires": [
-            [
-                "1067b2854f5e9b57"
-            ]
-        ]
-    },
-    {
-        "id": "609a0910aa1b5b26",
+        "id": "ad74616030df0386",
         "type": "http response",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "400",
         "statusCode": "400",
         "headers": {},
-        "x": 850,
-        "y": 440,
+        "x": 1570,
+        "y": 860,
         "wires": []
     },
     {
-        "id": "29700293c0ab3001",
+        "id": "bcd4b8235b8650d7",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"INSERT INTO \\\"User\\\"  (\\\"username\\\",\\\"password\\\",\\\"name\\\",\\\"email\\\",\\\"gender\\\",\\\"date\\\") VALUES ('\" + msg.req.body.username + \"','\" + msg.req.body.password + \"','\" + msg.req.body.name + \"','\" + msg.req.body.email + \"','\" + msg.req.body.gender + \"','\" + msg.req.body.date + \"');\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.username = msg.req.body.username;\nmsg.payload.password = msg.req.body.password;\nmsg.payload.name = msg.req.body.name;\nmsg.payload.email = msg.req.body.email;\nmsg.payload.gender = msg.req.body.gender;\nmsg.payload.date = msg.req.body.date;\n\nmsg.topic = \"INSERT INTO `user`(`username`, `password`, `name`, `email`, `gender`, `date`, `isAdmin`) VALUES (:username, :password, :name, :email, :gender, :date, 0);\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 320,
+        "x": 310,
+        "y": 160,
         "wires": [
             [
-                "4165590f21da11d6"
+                "f44a1fc8b08c79a3"
             ]
         ]
     },
     {
-        "id": "1067b2854f5e9b57",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 380,
-        "wires": [
-            [
-                "bff9a13b3c66fdc8"
-            ],
-            [
-                "609a0910aa1b5b26"
-            ]
-        ]
-    },
-    {
-        "id": "bd3bd70a4fae11f6",
+        "id": "670031441fe839c6",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API User Update Info",
         "url": "/api/user/update",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 540,
+        "y": 260,
         "wires": [
             [
-                "8c7ba003236793d0"
+                "3bb7a6dec316d831"
             ]
         ]
     },
     {
-        "id": "f62a3c4a14803d41",
+        "id": "861bbac4f9d05611",
         "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "200 - updated",
+        "z": "73dafa2e5aa8fce5",
+        "name": "200 - updated or deleted",
         "statusCode": "200",
         "headers": {},
-        "x": 880,
-        "y": 520,
+        "x": 1630,
+        "y": 740,
         "wires": []
     },
     {
-        "id": "af396002d2035b2c",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 540,
-        "wires": [
-            [
-                "d771b05ed0ef651d"
-            ]
-        ]
-    },
-    {
-        "id": "67b47190afc97701",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "8c7ba003236793d0",
+        "id": "3bb7a6dec316d831",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"UPDATE \\\"User\\\" SET \\\"name\\\" = '\" + msg.req.body.name + \"', \\\"email\\\" = '\" + msg.req.body.email + \"', \\\"gender\\\" = '\" + msg.req.body.gender + \"', \\\"date\\\" = '\" + msg.req.body.date + \"' WHERE \\\"id\\\" = \" + msg.req.body.userId + \";\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.name = msg.req.body.name;\nmsg.payload.email = msg.req.body.email;\nmsg.payload.gender = msg.req.body.gender;\nmsg.payload.date = msg.req.body.date;\nmsg.payload.userId = msg.req.body.userId;\n\nmsg.topic = \"UPDATE `user` SET `name` = :name, `email` = :email, `gender` = :gender, `date` = :date WHERE `id` = :userId;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 540,
+        "y": 260,
         "wires": [
             [
-                "af396002d2035b2c"
+                "ae036650fddca999"
             ]
         ]
     },
     {
-        "id": "d771b05ed0ef651d",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 600,
-        "wires": [
-            [
-                "f62a3c4a14803d41"
-            ],
-            [
-                "67b47190afc97701"
-            ]
-        ]
-    },
-    {
-        "id": "5f1e2adca37ac45a",
+        "id": "294722f56511d81c",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API Get User Aquariums",
         "url": "/api/user/aquarium",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 130,
-        "y": 1000,
+        "y": 420,
         "wires": [
             [
-                "3d7cb051f83593cb"
+                "8ed4754f0dd37c98"
             ]
         ]
     },
     {
-        "id": "6fe0d1b63fcd7bd6",
+        "id": "d858f2bbc2a25c77",
         "type": "http response",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "200 + data",
         "statusCode": "200",
         "headers": {},
-        "x": 870,
-        "y": 980,
+        "x": 1590,
+        "y": 560,
         "wires": []
     },
     {
-        "id": "57ebc7d56abadca5",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 1000,
-        "wires": [
-            [
-                "e062f69ec825ba37"
-            ]
-        ]
-    },
-    {
-        "id": "d97aecfedf24b84a",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 1120,
-        "wires": []
-    },
-    {
-        "id": "3d7cb051f83593cb",
+        "id": "8ed4754f0dd37c98",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"SELECT * FROM \\\"UserAquarium\\\" WHERE \\\"user_id\\\" = \" + msg.req.body.userId + \";\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.userId = msg.req.body.userId;\n\nmsg.topic = \"SELECT * FROM `useraquarium` WHERE `user_id` = :userId;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 1000,
+        "y": 420,
         "wires": [
             [
-                "57ebc7d56abadca5"
+                "cc895554853a45bd"
             ]
         ]
     },
     {
-        "id": "e062f69ec825ba37",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 1060,
-        "wires": [
-            [
-                "6fe0d1b63fcd7bd6"
-            ],
-            [
-                "d97aecfedf24b84a"
-            ]
-        ]
-    },
-    {
-        "id": "d7bd3acae8449a82",
+        "id": "683c7d8719078d66",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API User Change Password",
         "url": "/api/user/updatePassword",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 140,
-        "y": 760,
+        "y": 340,
         "wires": [
             [
-                "b6b1abf95e9672f1"
+                "fa363b3e7efe4f13"
             ]
         ]
     },
     {
-        "id": "20bbdd71d2151680",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "200 - updated",
-        "statusCode": "200",
-        "headers": {},
-        "x": 880,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "1b159a925b6f0d21",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 760,
-        "wires": [
-            [
-                "8a70c4a5ee118611"
-            ]
-        ]
-    },
-    {
-        "id": "78b48f1945d3143d",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "b6b1abf95e9672f1",
+        "id": "fa363b3e7efe4f13",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"UPDATE \\\"User\\\" SET \\\"password\\\" = '\" + msg.req.body.newPassword + \"' WHERE \\\"id\\\" =\" + msg.req.body.userId + \";\";\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 370,
-        "y": 760,
-        "wires": [
-            [
-                "1b159a925b6f0d21"
-            ]
-        ]
-    },
-    {
-        "id": "8a70c4a5ee118611",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 820,
-        "wires": [
-            [
-                "20bbdd71d2151680"
-            ],
-            [
-                "78b48f1945d3143d"
-            ]
-        ]
-    },
-    {
-        "id": "e40bc4d8d1061919",
-        "type": "http in",
-        "z": "25ca788654d8e6c3",
-        "name": "API Add User Aquarium",
-        "url": "/api/user/aquarium/add",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 120,
-        "y": 1220,
-        "wires": [
-            [
-                "ae4d29de565062af"
-            ]
-        ]
-    },
-    {
-        "id": "63fedbf467cdd7c5",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "201 - created",
-        "statusCode": "201",
-        "headers": {},
-        "x": 870,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "4ad824d23538bbb9",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 1220,
-        "wires": [
-            [
-                "1f615d7b1f147895"
-            ]
-        ]
-    },
-    {
-        "id": "b3e9170d683840f2",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "ae4d29de565062af",
-        "type": "function",
-        "z": "25ca788654d8e6c3",
-        "name": "create query",
-        "func": "msg.payload = \"INSERT INTO \\\"UserAquarium\\\"  (\\\"aquarium_name\\\",\\\"user_id\\\",\\\"device_id\\\") VALUES ('\" + msg.req.body.aquariumName + \"',\" + msg.req.body.userId + \",'\" + msg.req.body.deviceId + \"');\";\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 1220,
-        "wires": [
-            [
-                "4ad824d23538bbb9"
-            ]
-        ]
-    },
-    {
-        "id": "1f615d7b1f147895",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 1280,
-        "wires": [
-            [
-                "63fedbf467cdd7c5"
-            ],
-            [
-                "b3e9170d683840f2"
-            ]
-        ]
-    },
-    {
-        "id": "aeddf3bd525754a7",
-        "type": "http in",
-        "z": "25ca788654d8e6c3",
-        "name": "API Delete User Aquarium",
-        "url": "/api/user/aquarium/delete",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 130,
-        "y": 1440,
-        "wires": [
-            [
-                "b02d3747ea6ee930"
-            ]
-        ]
-    },
-    {
-        "id": "1de77cba564317d6",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "200 - deleted",
-        "statusCode": "200",
-        "headers": {},
-        "x": 870,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "33f0fa99c942655c",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 1440,
-        "wires": [
-            [
-                "abf21d6a612261c9"
-            ]
-        ]
-    },
-    {
-        "id": "791e81dec56966a4",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "b02d3747ea6ee930",
-        "type": "function",
-        "z": "25ca788654d8e6c3",
-        "name": "create query",
-        "func": "msg.payload = \"DELETE FROM \\\"UserAquarium\\\" WHERE \\\"id\\\" = \" + msg.req.body.id + \";\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.newPassword = msg.req.body.newPassword;\nmsg.payload.userId = msg.req.body.userId;\n\nmsg.topic = \"UPDATE `user` SET `password` = :newPassword WHERE `id` = :userId;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 1440,
+        "y": 340,
         "wires": [
             [
-                "33f0fa99c942655c"
+                "d80e8ade8da32aca"
             ]
         ]
     },
     {
-        "id": "abf21d6a612261c9",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 1500,
-        "wires": [
-            [
-                "1de77cba564317d6"
-            ],
-            [
-                "791e81dec56966a4"
-            ]
-        ]
-    },
-    {
-        "id": "0c14bc51e913dcfc",
+        "id": "a56c1900c0e1b4ed",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Add User Aquarium",
+        "url": "/api/user/aquarium/add",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "5bcdc895bb23eabe"
+            ]
+        ]
+    },
+    {
+        "id": "5bcdc895bb23eabe",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload = {};\nmsg.payload.aquariumName = msg.req.body.aquariumName;\nmsg.payload.userId = msg.req.body.userId;\nmsg.payload.deviceId = msg.req.body.deviceId;\n\nmsg.topic = \"INSERT INTO `useraquarium`(`aquarium_name`, `user_id`, `device_id`) VALUES (:aquariumName, :userId, :deviceId);\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "49f1e70de97428e8"
+            ]
+        ]
+    },
+    {
+        "id": "aabc95d80789b31a",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Delete User Aquarium",
+        "url": "/api/user/aquarium/delete",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "de16b7d8c9e4eaf1"
+            ]
+        ]
+    },
+    {
+        "id": "de16b7d8c9e4eaf1",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload = {};\nmsg.payload.id = msg.req.body.id;\n\nmsg.topic = \"DELETE FROM `useraquarium` WHERE `id` = :id;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "6848c140eaac498d"
+            ]
+        ]
+    },
+    {
+        "id": "68eeb303ef273b33",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
         "name": "API Get Aquarium",
         "url": "/api/aquarium",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 110,
-        "y": 1660,
+        "y": 740,
         "wires": [
             [
-                "bda53dc175657853"
+                "7cc851d40178ee87"
             ]
         ]
     },
     {
-        "id": "67fcb740e27e084f",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "200 + data",
-        "statusCode": "200",
-        "headers": {},
-        "x": 870,
-        "y": 1640,
-        "wires": []
-    },
-    {
-        "id": "f24f4cb14335b03d",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 1660,
-        "wires": [
-            [
-                "0998eeb761f4bb7a"
-            ]
-        ]
-    },
-    {
-        "id": "97d4ebdb121bf726",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 1780,
-        "wires": []
-    },
-    {
-        "id": "bda53dc175657853",
+        "id": "7cc851d40178ee87",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"SELECT * FROM \\\"Aquarium\\\" WHERE \\\"device_id\\\" = \" + msg.req.body.deviceId + \";\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.deviceId = msg.req.body.deviceId;\n\nmsg.topic = \"SELECT * FROM `aquarium` WHERE `device_id` = :deviceId;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1660,
+        "y": 740,
         "wires": [
             [
-                "f24f4cb14335b03d"
+                "7844ced37757a77c"
             ]
         ]
     },
     {
-        "id": "0998eeb761f4bb7a",
-        "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "null"
-            },
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 690,
-        "y": 1720,
-        "wires": [
-            [
-                "67fcb740e27e084f"
-            ],
-            [
-                "97d4ebdb121bf726"
-            ]
-        ]
-    },
-    {
-        "id": "d103ab3c12ec9fec",
+        "id": "d0722035078d8c69",
         "type": "http in",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "API Create Aquarium",
         "url": "/api/aquarium/create",
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
         "x": 120,
-        "y": 1860,
+        "y": 660,
         "wires": [
             [
-                "45534e68f13c68c1"
+                "9b36d66c01548390"
             ]
         ]
     },
     {
-        "id": "cb0c0427464cd9fc",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "201 - created",
-        "statusCode": "201",
-        "headers": {},
-        "x": 870,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "9ddffbcf7aa5c545",
-        "type": "Db2 in",
-        "z": "25ca788654d8e6c3",
-        "Db2": "3f4e811af2b68703",
-        "service": "_ext_",
-        "query": "",
-        "params": "",
-        "name": "",
-        "x": 530,
-        "y": 1860,
-        "wires": [
-            [
-                "9771271ebfbf0d3f"
-            ]
-        ]
-    },
-    {
-        "id": "8bfdd0fa9858472b",
-        "type": "http response",
-        "z": "25ca788654d8e6c3",
-        "name": "400",
-        "statusCode": "400",
-        "headers": {},
-        "x": 850,
-        "y": 1980,
-        "wires": []
-    },
-    {
-        "id": "45534e68f13c68c1",
+        "id": "9b36d66c01548390",
         "type": "function",
-        "z": "25ca788654d8e6c3",
+        "z": "73dafa2e5aa8fce5",
         "name": "create query",
-        "func": "msg.payload = \"INSERT INTO \\\"Aquarium\\\"  (\\\"device_type\\\",\\\"device_id\\\") VALUES ('\" + msg.req.body.deviceType + \"','\" + msg.req.body.deviceId + \"');\";\n\nreturn msg;",
+        "func": "msg.payload = {};\nmsg.payload.deviceType = msg.req.body.deviceType;\nmsg.payload.deviceId = msg.req.body.deviceId;\n\nmsg.topic = \"INSERT INTO `aquarium`(`device_type`, `device_id`) VALUES (:deviceType, :deviceId);\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1860,
+        "y": 660,
         "wires": [
             [
-                "9ddffbcf7aa5c545"
+                "a75c853a5a05db9a"
             ]
         ]
     },
     {
-        "id": "9771271ebfbf0d3f",
+        "id": "f44a1fc8b08c79a3",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-2",
+        "x": 500,
+        "y": 160,
+        "wires": [
+            [
+                "2e06fd7d69f2beda"
+            ]
+        ]
+    },
+    {
+        "id": "c41e300d3d88f97a",
+        "type": "catch",
+        "z": "73dafa2e5aa8fce5",
+        "name": "sql error",
+        "scope": [
+            "4e8989aa1b39439f",
+            "f44a1fc8b08c79a3",
+            "ae036650fddca999",
+            "d80e8ade8da32aca",
+            "cc895554853a45bd",
+            "49f1e70de97428e8",
+            "6848c140eaac498d",
+            "7844ced37757a77c",
+            "a75c853a5a05db9a",
+            "767476bb43137487",
+            "15cfd28c7dc62a8a",
+            "a58ac4da3a46d298",
+            "947ed628e2355767",
+            "33fba90004e917f4",
+            "7ef483f594391f3d",
+            "cf0956361542df74",
+            "447d799ce28c71d8",
+            "59f5bcb9f393a7ac"
+        ],
+        "uncaught": false,
+        "x": 1040,
+        "y": 1000,
+        "wires": [
+            [
+                "4390ee9b76d64bcc"
+            ]
+        ]
+    },
+    {
+        "id": "4390ee9b76d64bcc",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "format error",
+        "func": "msg.payload = {};\nmsg.payload.error = msg.error.message;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 960,
+        "wires": [
+            [
+                "ad74616030df0386"
+            ]
+        ]
+    },
+    {
+        "id": "ae036650fddca999",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-3",
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
+        ]
+    },
+    {
+        "id": "2e06fd7d69f2beda",
         "type": "switch",
-        "z": "25ca788654d8e6c3",
-        "name": "check error",
-        "property": "error",
+        "z": "73dafa2e5aa8fce5",
+        "name": "check result",
+        "property": "payload.affectedRows",
         "propertyType": "msg",
         "rules": [
             {
-                "t": "null"
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
             },
             {
-                "t": "nnull"
+                "t": "neq",
+                "v": "1",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 690,
-        "y": 1920,
+        "x": 950,
+        "y": 620,
         "wires": [
             [
-                "cb0c0427464cd9fc"
+                "c865c184caf1c6e1"
             ],
             [
-                "8bfdd0fa9858472b"
+                "786caa8d2e124b69"
             ]
         ]
     },
     {
-        "id": "f1849ddadca1075e",
+        "id": "10cdb82807a18817",
+        "type": "switch",
+        "z": "73dafa2e5aa8fce5",
+        "name": "check result",
+        "property": "payload.affectedRows",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 900,
+        "wires": [
+            [
+                "861bbac4f9d05611"
+            ],
+            [
+                "786caa8d2e124b69"
+            ]
+        ]
+    },
+    {
+        "id": "d80e8ade8da32aca",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-4",
+        "x": 520,
+        "y": 340,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
+        ]
+    },
+    {
+        "id": "cc895554853a45bd",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-5",
+        "x": 520,
+        "y": 420,
+        "wires": [
+            [
+                "0cdc39d2cd8848e3"
+            ]
+        ]
+    },
+    {
+        "id": "49f1e70de97428e8",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-6",
+        "x": 500,
+        "y": 500,
+        "wires": [
+            [
+                "2e06fd7d69f2beda"
+            ]
+        ]
+    },
+    {
+        "id": "6848c140eaac498d",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-7",
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
+        ]
+    },
+    {
+        "id": "7844ced37757a77c",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-9",
+        "x": 500,
+        "y": 740,
+        "wires": [
+            [
+                "030bb906389f592d"
+            ]
+        ]
+    },
+    {
+        "id": "a75c853a5a05db9a",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-8",
+        "x": 500,
+        "y": 660,
+        "wires": [
+            [
+                "2e06fd7d69f2beda"
+            ]
+        ]
+    },
+    {
+        "id": "786caa8d2e124b69",
         "type": "function",
-        "z": "4ff48984.4f9cb",
-        "name": "Save Events",
-        "func": "\n// initialise the counter to 0 if it doesn't exist already\nvar dashboardLog = context.get('dashboardLog')|| [];\n\ndashboardLog.push(msg);\nif (dashboardLog.length > 20){\n    // Delete oldest message if > 20\n    dashboardLog.shift();\n    dashboardLog.length = 20;\n} \n\n\n// store the value back\ncontext.set('dashboardLog',dashboardLog);\n\n// make it part of the outgoing msg object\nmsg = {};\nmsg.payload = dashboardLog;\nreturn msg;\n",
+        "z": "73dafa2e5aa8fce5",
+        "name": "format error",
+        "func": "msg.payload = {};\nmsg.payload.error = \"Error: Sql query return incorrect results\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 860,
+        "wires": [
+            [
+                "ad74616030df0386"
+            ]
+        ]
+    },
+    {
+        "id": "0cdc39d2cd8848e3",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "format result",
+        "func": "temp = msg.payload;\n\nmsg.payload = {};\nmsg.payload.results = temp;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 560,
+        "wires": [
+            [
+                "d858f2bbc2a25c77"
+            ]
+        ]
+    },
+    {
+        "id": "767476bb43137487",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-10",
+        "x": 500,
+        "y": 840,
+        "wires": [
+            [
+                "030bb906389f592d"
+            ]
+        ]
+    },
+    {
+        "id": "bd55ea070446e430",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Login",
+        "url": "/api/admin/login",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 840,
+        "wires": [
+            [
+                "1bb6e0f791348a8d"
+            ]
+        ]
+    },
+    {
+        "id": "1bb6e0f791348a8d",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload={}\nmsg.payload.username = msg.req.body.username;\nmsg.payload.password = msg.req.body.password;\n\nmsg.topic = \"SELECT * FROM `user` WHERE `username` = :username AND `password` = :password AND `isAdmin` = 1;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 840,
+        "wires": [
+            [
+                "767476bb43137487"
+            ]
+        ]
+    },
+    {
+        "id": "15cfd28c7dc62a8a",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-11",
+        "x": 500,
+        "y": 920,
+        "wires": [
+            [
+                "0cdc39d2cd8848e3"
+            ]
+        ]
+    },
+    {
+        "id": "41325e1d82befb43",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Dashboard",
+        "url": "/api/admin/dashboard",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 920,
+        "wires": [
+            [
+                "c07ed18ee47a3699"
+            ]
+        ]
+    },
+    {
+        "id": "c07ed18ee47a3699",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.topic = \"SELECT (SELECT count(`id`) FROM `aquarium`) AS total_devices, (SELECT count(`id`) FROM `user`) AS total_users;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 920,
+        "wires": [
+            [
+                "15cfd28c7dc62a8a"
+            ]
+        ]
+    },
+    {
+        "id": "a58ac4da3a46d298",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-12",
+        "x": 500,
+        "y": 1000,
+        "wires": [
+            [
+                "0cdc39d2cd8848e3"
+            ]
+        ]
+    },
+    {
+        "id": "c6507d11992d898f",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Users",
+        "url": "/api/admin/users",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 1000,
+        "wires": [
+            [
+                "21d720eb0f642906"
+            ]
+        ]
+    },
+    {
+        "id": "21d720eb0f642906",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.topic = \"SELECT * FROM `user`\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1000,
+        "wires": [
+            [
+                "a58ac4da3a46d298"
+            ]
+        ]
+    },
+    {
+        "id": "947ed628e2355767",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-13",
+        "x": 500,
+        "y": 1080,
+        "wires": [
+            [
+                "030bb906389f592d"
+            ]
+        ]
+    },
+    {
+        "id": "f05090b50e0c285b",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin User Edit",
+        "url": "/api/admin/user/edit",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 1080,
+        "wires": [
+            [
+                "11c49425c347c133"
+            ]
+        ]
+    },
+    {
+        "id": "11c49425c347c133",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload={}\nmsg.payload.userId = msg.req.body.userId;\n\nmsg.topic = \"SELECT * FROM `user` WHERE `id` = :userId\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 1080,
+        "wires": [
+            [
+                "947ed628e2355767"
+            ]
+        ]
+    },
+    {
+        "id": "33fba90004e917f4",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-14",
+        "x": 540,
+        "y": 1160,
+        "wires": [
+            [
+                "0cdc39d2cd8848e3"
+            ]
+        ]
+    },
+    {
+        "id": "8361e7de5f4622d2",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Device Aquarium",
+        "url": "/api/admin/aquariums",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "388a69a811a504e5"
+            ]
+        ]
+    },
+    {
+        "id": "388a69a811a504e5",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.topic = \"SELECT * FROM `aquarium`\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1160,
+        "wires": [
+            [
+                "33fba90004e917f4"
+            ]
+        ]
+    },
+    {
+        "id": "7ef483f594391f3d",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-16",
+        "x": 560,
+        "y": 1320,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
+        ]
+    },
+    {
+        "id": "2bdf3c5604ace761",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Device Aquarium Update",
+        "url": "/api/admin/aquarium/update",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 1320,
+        "wires": [
+            [
+                "07ebc8c2d4a34c07"
+            ]
+        ]
+    },
+    {
+        "id": "07ebc8c2d4a34c07",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload = {};\nmsg.payload.deviceType = msg.req.body.deviceType;\nmsg.payload.deviceId = msg.req.body.deviceId;\nmsg.payload.id = msg.req.body.id;\n\nmsg.topic = \"UPDATE `aquarium` SET `device_type` = :deviceType, `device_id` = :deviceId WHERE `id` = :id;\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 180,
+        "y": 1320,
         "wires": [
             [
-                "45545f337c9c5360"
+                "7ef483f594391f3d"
             ]
         ]
     },
     {
-        "id": "17f17e94ba6ec982",
-        "type": "ui_form",
-        "z": "4ff48984.4f9cb",
-        "name": "",
-        "label": "Thêm thiết bị cho bể cá",
-        "group": "54bca71e.4287f",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Device Type",
-                "value": "device_type",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Device ID",
-                "value": "device_id",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "device_type": "",
-            "device_id": ""
-        },
-        "payload": "",
-        "submit": "Thêm mới",
-        "cancel": "Hủy bỏ",
-        "topic": "Form",
-        "topicType": "str",
-        "splitLayout": false,
-        "className": "",
+        "id": "cf0956361542df74",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-15",
+        "x": 560,
+        "y": 1240,
+        "wires": [
+            [
+                "030bb906389f592d"
+            ]
+        ]
+    },
+    {
+        "id": "530ff418b8bc79d3",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Admin Device Aquarium Edit",
+        "url": "/api/admin/aquarium/edit",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
         "x": 150,
-        "y": 180,
+        "y": 1240,
         "wires": [
             [
-                "f1849ddadca1075e"
+                "1efa67c89805255c"
             ]
         ]
     },
     {
-        "id": "45545f337c9c5360",
+        "id": "1efa67c89805255c",
         "type": "function",
-        "z": "4ff48984.4f9cb",
-        "name": "Get data form",
-        "func": "msg.payload = msg.payload[0].payload\n\nreturn msg;",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload={}\nmsg.payload.id = msg.req.body.id;\n\nmsg.topic = \"SELECT * FROM `aquarium` WHERE `id` = :id\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 180,
+        "x": 390,
+        "y": 1240,
         "wires": [
-            []
+            [
+                "cf0956361542df74"
+            ]
+        ]
+    },
+    {
+        "id": "1a1f0d32062fadf3",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Delete User",
+        "url": "/api/admin/user/delete",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 1400,
+        "wires": [
+            [
+                "8f74c664ad296ffe"
+            ]
+        ]
+    },
+    {
+        "id": "8f74c664ad296ffe",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload = {};\nmsg.payload.id = msg.req.body.id;\n\nmsg.topic = \"DELETE FROM `user` WHERE `id` = :id;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1400,
+        "wires": [
+            [
+                "447d799ce28c71d8"
+            ]
+        ]
+    },
+    {
+        "id": "447d799ce28c71d8",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-17",
+        "x": 560,
+        "y": 1400,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
+        ]
+    },
+    {
+        "id": "7efba9b07743d49b",
+        "type": "http in",
+        "z": "73dafa2e5aa8fce5",
+        "name": "API Delete Device Aquarium",
+        "url": "/api/admin/aquarium/delete",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 1480,
+        "wires": [
+            [
+                "8295feb72d4856b0"
+            ]
+        ]
+    },
+    {
+        "id": "8295feb72d4856b0",
+        "type": "function",
+        "z": "73dafa2e5aa8fce5",
+        "name": "create query",
+        "func": "msg.payload = {};\nmsg.payload.id = msg.req.body.id;\n\nmsg.topic = \"DELETE FROM `aquarium` WHERE `id` = :id;\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1480,
+        "wires": [
+            [
+                "59f5bcb9f393a7ac"
+            ]
+        ]
+    },
+    {
+        "id": "59f5bcb9f393a7ac",
+        "type": "mysql",
+        "z": "73dafa2e5aa8fce5",
+        "mydb": "d850d3048615863d",
+        "name": "mysql-18",
+        "x": 560,
+        "y": 1480,
+        "wires": [
+            [
+                "10cdb82807a18817"
+            ]
         ]
     }
 ]
